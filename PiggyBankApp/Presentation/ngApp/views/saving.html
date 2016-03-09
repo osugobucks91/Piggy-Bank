@@ -1,0 +1,45 @@
+﻿<div class="row">
+    <div class="col-md-12 text-center">
+        <h1><b>Your Current Goal!!</b></h1>
+    </div>
+    <div class="col-md-6 text-center">
+        <h3 class="text-muted">Item</h3>
+        <br />
+        <h4>{{sc.savings.item}}</h4>
+    </div>
+    <div class="col-md-6 text-center">
+        <h3 class="text-muted">Item Value</h3>
+        <br />
+        <h4>{{sc.savings.itemValue | currency}}</h4>
+    </div>
+    <div class="col-md-12 text-center">
+        <h3><b>Remainder to Goal:</b></h3>
+        <br />
+        <h4>{{sc.savings.remainderToGoal | currency}}</h4>
+    </div> 
+    <div class="row">
+        <a href="#/saving" class="btn btn-default">Go Back</a>
+        <div class="btn btn-danger" ng-click="sc.deleteSaving()">Delete</div>
+        <div class="btn btn-warning" ng-click="sc.goToUpdate()">Edit</div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <h2 class="text-center text-muted">Expenses Skipped</h2>
+    <a href="#/create/expense/{{sc.savings.id}}" class="btn btn-default">Add A New Expense</a>
+    <br /><br />
+    <table class="table table-responsive table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+        <tr ng-repeat="e in sc.savings.expenses">
+            <td>{{e.name}}</td>
+            <td>{{e.value | currency}}</td>
+        </tr>
+        <tr>
+            <th>TOTAL</th>
+            <td>{{sc.savings.total | currency}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,39 @@
+﻿<div class="row">
+    <div class="col-md-3 text-right">
+        <b>Name:</b>
+    </div>
+    <div class="col-md-9">
+        {{debtDetails.debt.companyName}}
+    </div>
+    <div class="col-md-3 text-right">
+        <b>Type:</b>
+    </div>
+    <div class="col-md-9">
+        {{debtDetails.debt.type}}
+    </div>
+    <div class="col-md-3 text-right">
+        <b>Frequency:</b>
+    </div>
+    <div class="col-md-9">
+        {{debtDetails.debt.frequency}}
+    </div>
+    <div class="col-md-3 text-right">
+        <b>Dollar Amount Per Check:</b>
+    </div>
+    <div class="col-md-9">
+        {{debtDetails.debt.dollarAmount | currency}}
+    </div>
+    <div class="col-md-3 text-right">
+        <b>Total Monthly Amount:</b>
+    </div>
+    <div class="col-md-9">
+        {{debtDetails.debt.totalMonthlyAmount | currency}}
+    </div>
+    <br />
+    <div class="row">
+        <a href="#/list" class="btn btn-default">Go Back</a>
+        <div class="btn btn-warning" ng-click="debtDetails.goToUpdate()">Edit</div>
+        <div class="btn btn-danger" ng-click="debtDetails.deleteDebt()">Delete</div>
+    </div>
+</div>
+

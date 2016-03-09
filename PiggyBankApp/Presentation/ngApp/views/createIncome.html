@@ -1,0 +1,41 @@
+﻿<div class="row text-center">
+    <div class="col-md-3 col-md-offset-4">
+        <h2 class="text-muted">Income</h2>
+        <form ng-submit="create.addIncome()">
+            <div class="row">
+                <input class="form-control" placeholder="Enter Name..." ng-model="create.newIncome.companyName" />
+            </div>
+            <div class="row">
+                <select class="form-control" ng-model="create.newIncome.type">
+                    <option value="" selected disabled style="display:none">Type</option>
+                    <option value="Earned">Earned</option>
+                    <option value="Passive">Passive</option>
+                    <option value="Investment">Investment</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="row">
+                <select class="form-control" ng-model="create.newIncome.frequency">
+                    <option value="" selected disabled style="display:none">Frequency</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Twice a Month">Twice a Month</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="row">
+                <input class="form-control" placeholder="Enter Amount Per Check..." ng-model="create.newIncome.dollarAmount" />
+            </div>
+            <div class="row">
+                <input class="form-control" placeholder="Enter Total Monthly Amount..." ng-model="create.newIncome.totalMonthlyAmount" />
+            </div>
+            <br />
+            <div class="row">
+                <input type="submit" value="Submit Income" class="form-control" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <a href="#/list" class="btn btn-default">Go Back</a>
+</div>

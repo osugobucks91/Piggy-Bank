@@ -1,0 +1,32 @@
+﻿<h1 class="text-center text-muted">Incomes</h1>
+<a href="#/create/income" class="btn btn-default">Add Income</a>
+<br /> <br />
+<table class="table table-responsive table-striped text-center">
+    <tr class="text-center">
+        <th>Name</th>
+        <th>Type</th>
+        <th>Total Monthly Amount</th>
+    </tr>
+    <tr ng-repeat="i in list.incomes">
+        <td ng-click="list.goToIncomeDetails(i.id)">{{i.companyName}}</td>
+        <td ng-click="list.goToIncomeDetails(i.id)">{{i.type}}</td>
+        <td ng-click="list.goToIncomeDetails(i.id)">{{i.totalMonthlyAmount | currency}}</td>
+    </tr>
+</table>
+<br />
+<br />
+<h1 class="text-center text-muted">Debts</h1>
+<a href="#/create/debt" class="btn btn-default">Add Debt</a>
+<br /><br />
+<table class="table table-responsive table-striped text-center">
+    <tr class="text-center">
+        <th>Name</th>
+        <th>Type</th>
+        <th>Total Monthly Amount</th>
+    </tr>
+    <tr ng-repeat="d in list.debts" ng-click="list.goToDebtDetails(d.id)">
+        <td>{{d.companyName}}</td>
+        <td>{{d.type}}</td>
+        <td>{{d.totalMonthlyAmount | currency}}</td>
+    </tr>
+</table>

@@ -1,0 +1,15 @@
+﻿<h1 class="text-center text-muted">Savings Goals</h1>
+<div class="row">
+    <a href="#/create/saving" class="btn btn-default">Add Saving Goal</a>
+</div>
+<br /> <br />
+<table class="table table-responsive table-striped text-center">
+    <tr class="text-center">
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+    <tr ng-repeat="s in list.savings" ng-click="list.goToSavingDetails(s.id)">
+        <td>{{s.item}}</td>
+        <td>{{s.itemValue | currency}}</td>
+    </tr>
+</table>

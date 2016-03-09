@@ -1,0 +1,20 @@
+﻿<div class="row text-center">
+    <div class="col-md-3 col-md-offset-4">
+        <h2 class="text-muted">Savings Goal</h2>
+        <form ng-submit="create.addSaving()">
+            <div class="row">
+                <input class="form-control" placeholder="Enter Item Name..." ng-model="create.newSaving.item" />
+            </div>
+            <div class="row">
+                <input class="form-control" placeholder="Enter Item Value..." ng-model="create.newSaving.itemValue" />
+            </div>
+            <br />
+            <div class="row">
+                <input type="submit" value="Submit Saving Goal" class="form-control" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <a href="#/saving" class="btn btn-default">Go Back</a>
+</div>

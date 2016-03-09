@@ -1,0 +1,43 @@
+﻿<div class="row text-center">
+    <div class="col-md-3 col-md-offset-4">
+        <h2 class="text-muted">Debt</h2>
+        <form ng-submit="create.addDebt()">
+            <div class="row">
+                <input class="form-control" placeholder="Enter Name..." ng-model="create.newDebt.companyName" />
+            </div>
+            <div class="row">
+                <select class="form-control" ng-model="create.newDebt.type">
+                    <option value="" selected disabled style="display:none">Type</option>
+                    <option value="Mortgage">Mortgage</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Utility">Utility</option>
+                    <option value="Car Payment">Car Payment</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="row">
+                <select class="form-control" ng-model="create.newDebt.frequency">
+                    <option value="" selected disabled style="display:none">Frequency</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Twice a Month">Twice a Month</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="row">
+                <input class="form-control" placeholder="Enter Per Check Amount..." ng-model="create.newDebt.dollarAmount" />
+            </div>
+            <div class="row">
+                <input class="form-control" placeholder="Enter Total Monthly Amount..." ng-model="create.newDebt.totalMonthlyAmount" />
+            </div>
+            <br />
+            <div class="row">
+                <input type="submit" value="Submit Debt" class="form-control" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <a href="#/list" class="btn btn-default">Go Back</a>
+</div>

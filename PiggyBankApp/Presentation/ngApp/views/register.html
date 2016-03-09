@@ -1,0 +1,22 @@
+﻿<div class="row text-center">
+    <div class="col-md-4 col-md-offset-4">
+        <form ng-submit="register.register()">
+            <div class="row">
+                <input ng-model="register.newUser.username" class="form-control" placeholder="Username" />
+            </div>
+            <div class="row">
+                <input ng-model="register.newUser.email" class="form-control" placeholder="Email" />
+            </div>
+            <div class="row">
+                <input ng-model="register.newUser.password" type="password" class="form-control" placeholder="Password" />
+            </div>
+            <div class="row">
+                <input ng-model="register.newUser.confirmPassword" type="password" class="form-control" placeholder="Confirm Password" />
+            </div>
+            <br />
+            <div class="row">
+                <input type="submit" value="Register" class="form-control" />
+            </div>
+        </form>
+    </div>
+</div>
